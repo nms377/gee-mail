@@ -1,18 +1,32 @@
 <html>
 	<head>
+	<title>GeeMail - Nicole Sandry</title>
 		<script src="js/mail-generator.js"></script>
 		<link href="css/style.css" rel="stylesheet" media="screen">
     <script>
-      window.onload = function(){
+      window.onload = function(loadGeeMails){
         // ALL OF YOUR JAVASCRIPT CODE SHOULD GO HERE. 
         // We have to use window.onload so your JavaScript doesn't execute until the page has loaded and all HTML has been downloaded to your browser
-        
-      };
+        document.getElementById("table").innerHTML = 
+        }
+    };
     </script>
 	</head>
 	<body>
 		<div class="container" id="main">
-			Build Me!
+			<h1>GeeMail</h1>
+			<ul>
+				<li>Inbox</li>
+				<li>Sent</li>
+				<li>Trash</li>
+			</ul>
+		</div>
+			<table class = "table">
+			<tr class ="mail">
+			<td id="date">Date</td>
+			<td id="sender">Sender</td>
+			<td id="subject">Subject</td></tr>
+			</table>
 		</div>
 	</body>
 </html>

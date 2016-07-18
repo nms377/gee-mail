@@ -4,10 +4,9 @@
 		<script src="js/mail-generator.js"></script>
 		<link href="css/style.css" rel="stylesheet" media="screen">
     <script>
-      window.onload = function(loadGeeMails){
+      window.onload = function(){
         // ALL OF YOUR JAVASCRIPT CODE SHOULD GO HERE. 
         // We have to use window.onload so your JavaScript doesn't execute until the page has loaded and all HTML has been downloaded to your browser
-        document.getElementById("table").innerHTML = 
         }
     };
     </script>
@@ -15,6 +14,8 @@
 	<body>
 		<div class="container" id="main">
 			<h1>GeeMail</h1>
+		</div>
+		<div class ="menu">	
 			<ul>
 				<li>Inbox</li>
 				<li>Sent</li>
@@ -23,9 +24,9 @@
 		</div>
 			<table class = "table">
 			<tr class ="mail">
-			<td id="date">Date</td>
-			<td id="sender">Sender</td>
-			<td id="subject">Subject</td></tr>
+			<th id="date">Date</th>
+			<th id="sender">Sender</th>
+			<th id="subject">Subject</th></tr>
 			</table>
 		</div>
 	</body>

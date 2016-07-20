@@ -7,10 +7,8 @@
       window.onload = function(){
         // ALL OF YOUR JAVASCRIPT CODE SHOULD GO HERE. 
         // We have to use window.onload so your JavaScript doesn't execute until the page has loaded and all HTML has been downloaded to your browser
-        function window.geemails(){
-        	for i=0, i<10, i++;
-        	document.getELementById("geemails").innerHTML = loadGeemails();
-        }
+		var counter = 10;
+		document.getElementById("counter").innerHTML = 10;
     };
     </script>
 	</head>
@@ -20,9 +18,7 @@
 		</div>
 		<div class ="menu">	
 			<ul>
-				<li><a href = "#Inbox">Inbox ("count")<a></li>
-				<li><a href = "#Inbox">Sent<a></li>
-				<li><a href = "#Inbox">Trash</a></li>
+				<li><a href="X" class = "menu">Inbox</a>(<span id= "counter"></span>)</li>
 			</ul>
 		</div>
 			<table class = "table">

@@ -7,32 +7,59 @@
       window.onload = function(){
         // ALL OF YOUR JAVASCRIPT CODE SHOULD GO HERE. 
         // We have to use window.onload so your JavaScript doesn't execute until the page has loaded and all HTML has been downloaded to your browser
-		
-		//var counter = 10;
-		//document.getElementById("counter").innerHTML = 10;
-		var counter = ['Call Your Mother', 'Cheap Online Meds', 'Change Your Life Today', 'Sppoky Stories', 'Meet Singles In Your Area', 'Have You Heard?', 'Yo', 'RE: Looking for a three legged cat', 'Get Rich Quick!', 'FW: Token Chain Email']
-		document.getElementById("counter").innerHTML = counter.length;
 
-		document.getElementById("loadGeeMails").innerHTML = window.geemails;
-    };
+var sum = 0; 
+
+for (var i=0; i<10; i++){
+
+	sum += 1;
+
+	var wrap = document.createElement('div');
+	wrap.className = 'wrapper';
+	wrap.innerHTML = '';
+	main.appendChild(wrap);
+
+	var line = document.createElement('hr');
+	line.className = 'line';
+	wrap.appendChild(line);
+
+	var date = document.createElement('div');
+	date.className= 'date';
+	date.innerHTML = getRandomDate();
+	wrap.appendChild(date);
+
+	var send = document.createElement('div');
+	send.className = 'send';
+	send.innerHTML = sender[i];
+	wrap.appendChild(send);
+
+	var subj = document.createElement('div');
+	subj.className = 'subj';
+	subj.innerHTML = subject[i];
+	wrap.appendChild(subj);
+
+	var bod = document.createElement('div');
+	bod.className = 'bod';
+	bod.innerHTML = body[i];
+	wrap.appendChild(bod);
+
+	}
+
+document.getElementById('counter');
+counter.innerHTML = sum;
+body.appendChild(counter);
+
+};
+
     </script>
+
 	</head>
+
 	<body>
-		<div class="container" id="main">
-			<h1>GeeMail</h1>
-		</div>
-		<div class ="menu">	
-			<ul>
-				<li><a href="X" class = "menu">Inbox</a> (<span id= "counter"></span>)</li>
-			</ul>
-		</div>
-		<div id = "loadGeeMails">
-			<table class = "table">
-			<tr class ="geemails">
-			<td id="date"></td>
-			<td id="sender"></td>
-			<td id="subject"></td></tr>
-			</table>
-		</div>
+
+		<div id="counter"></div>
+
+		<div id = "main"> </div>
 	</body>
+
 </html>

@@ -1,26 +1,11 @@
-body {
+body{
 	font-family: sans-serif;
-	font-color: 000;
-}
-.container {
-	padding-left: 40px;
-}
-.menu {
-	z-index: 1;
-	list-style-type: none;
-	text-align: left;
-}
-.menu ul, li {
-	display: block;
-	text-align: left;
 }
 
-.menu a:link {
-	text-decoration: none;
+.wrapper{
+
+}
+
+.date{
 	font-weight: bold;
-}
-
-.menu a:active {
-	text-decoration: none;
-	font-weight: none;
 }

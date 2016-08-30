@@ -12,7 +12,7 @@ var sum = 0;
 
 for (var i=0; i<10; i++){
 
-	sum += 1;
+	sum = 'Inbox (' + geemails.length +')';
 
 	var wrap = document.createElement('div');
 	wrap.className = 'wrapper';
@@ -45,10 +45,19 @@ for (var i=0; i<10; i++){
 
 	}
 
-document.getElementById('counter');
-counter.innerHTML = sum;
-body.appendChild(counter);
+	document.getElementById('counter');
+	counter.innerHTML = sum;
+	/*body.appendChild(counter);*/
 
+function setInterval(){
+	var oneMore = getNewMessage();
+	var newMessage = document.createElement('div');
+	newMessage.id = 'newMsg';
+	newMessage.innerHTML = oneMore;
+	main.appendChild(newMessage);
+}
+
+setInterval(geemails.sender, geemails.subject);
 };
 
     </script>

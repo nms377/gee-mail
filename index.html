@@ -8,11 +8,14 @@
         // ALL OF YOUR JAVASCRIPT CODE SHOULD GO HERE. 
         // We have to use window.onload so your JavaScript doesn't execute until the page has loaded and all HTML has been downloaded to your browser
 
-var sum = 0; 
+/*var sum = 0; */
 
-for (var i=0; i<10; i++){
+var sum = 'Inbox ' + geemails.length;
+console.log(sum);
 
-	sum = 'Inbox (' + geemails.length +')';
+for (var i=0; i<geemails.length; i++){
+
+counter.innerHTML = sum;
 
 	var wrap = document.createElement('div');
 	wrap.className = 'wrapper';
@@ -25,48 +28,120 @@ for (var i=0; i<10; i++){
 
 	var date = document.createElement('div');
 	date.className= 'date';
-	date.innerHTML = getRandomDate();
+	date.innerHTML = geemails[i].date /*geemails[i].date*/;
 	wrap.appendChild(date);
 
 	var send = document.createElement('div');
 	send.className = 'send';
-	send.innerHTML = sender[i];
+	send.innerHTML = geemails[i].sender /*geemails[i].sender*/;
 	wrap.appendChild(send);
 
 	var subj = document.createElement('div');
 	subj.className = 'subj';
-	subj.innerHTML = subject[i];
+	subj.innerHTML = geemails[i].subject;
 	wrap.appendChild(subj);
+	
 
 	var bod = document.createElement('div');
 	bod.className = 'bod';
-	bod.innerHTML = body[i];
-	wrap.appendChild(bod);
+	bod.innerHTML = geemails[i].body;
+	subj.appendChild(bod);
 
 	}
 
+//TOGGLE PART 1
+var content = document.getElementsByClassName('subj');
+	for(var p = 0; p<content.length; p++){
+		content[p].addEventListener('click', subBod);
+	}
+
+	function subBod(){
+		var content = this.querySelectorAll('.bod')[0];
+		if(content.style.display === 
+			'none'){
+			content.style.display = 'block';
+		}else{
+			content.style.display = 'none';
+		}
+	}
+
+//THIS GENERATES NEW MESSAGES
+	/*console.log(getNewMessage());*/
+
+	function newMail(){
+		
+		var newIsh = getNewMessage();
+
+/*	var wrapper = document.createElement('div');
+	wrap.className = 'wrapper';
+	wrap.innerHTML = '';
+	main.appendChild(wrap);*/ //coding no like dis
+
+	var line = document.createElement('hr');
+	line.className = 'line';
+	wrap.appendChild(line);
+
+	var date = document.createElement('div');
+	date.className= 'date';
+	date.innerHTML = newIsh.date;
+	wrap.appendChild(date);
+
+	var send = document.createElement('div');
+	send.className = 'send';
+	send.innerHTML = newIsh.sender;
+	wrap.appendChild(send);
+
+	var subj = document.createElement('div');
+	subj.className = 'subj';
+	subj.innerHTML = newIsh.subject;
+	wrap.appendChild(subj);
+	
+
+	var bod = document.createElement('div');
+	bod.className = 'bod';
+	bod.innerHTML = newIsh.body;
+	subj.appendChild(bod);
+
+//TOGGLE PART 2: had to move into the second set of messages otherwise it wouldn't work on the new messages being generated
+var newContent = document.getElementsByClassName('subj');
+	console.log(newContent.length);
+	for(var s = 0; s<newContent.length; s++){
+		newContent[s].addEventListener('click', newSubBod);
+	}
+
+	function newSubBod(){
+		var newContent = this.querySelectorAll('.bod')[0];
+		if(newContent.style.display ==='none'){
+			newContent.style.display = 'block';
+		}else{
+			newContent.style.display = 'none';
+		}
+	}
+
+//COUNTER
 	document.getElementById('counter');
-	counter.innerHTML = sum;
-	/*body.appendChild(counter);*/
+	counter.innerHTML = 'Inbox ' + newContent.length++;
 
-function setInterval(){
-	var oneMore = getNewMessage();
-	var newMessage = document.createElement('div');
-	newMessage.id = 'newMsg';
-	newMessage.innerHTML = oneMore;
-	main.appendChild(newMessage);
-}
+	}
 
-setInterval(geemails.sender, geemails.subject);
+
+	setInterval(newMail, 3000);
+
+//PAU HANA!!
+
 };
-
     </script>
 
 	</head>
 
 	<body>
 
-		<div id="counter"></div>
+		<div id="banner"><h1>Gee-Mail</h1>
+
+			<div id="counter"></div>
+
+		</div>
+
 
 		<div id = "main"> </div>
 	</body>

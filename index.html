@@ -10,15 +10,40 @@
 
 /*var sum = 0; */
 
-var sum = 'Inbox (' + geemails.length + ')';
-console.log(sum);
+var indexTwo = [
+	{
+	draft: 'Draft',
+	sent: 'Sent',
+	trash: 'Trash'
+	}
+];
 
-var indexTwo = {draft:'Draft', sent:'Sent', trash:'Trash'};
-/*document.getElementById('counter').style.display = '';*/
+	var sum = 'Inbox (' + geemails.length + ')';
+	console.log(sum);
+	sum.id = 'inbox1';
+	var inbox = document.createElement('li');
+	inbox.className = 'ind';
+	inbox.innerHTML = sum;
+	banner.appendChild(inbox);
+
+ 	var draftIt = document.createElement('li');
+ 	draftIt.className = 'ind';
+ 	draftIt.innerHTML = indexTwo[0].draft;
+ 	banner.appendChild(draftIt);
+
+ 	var draftItTwo = document.createElement('li');
+ 	draftItTwo.className = 'ind';
+ 	draftItTwo.innerHTML = indexTwo[0].sent;
+ 	banner.appendChild(draftItTwo);
+
+ 	var draftItThree = document.createElement('li');
+ 	draftItThree.className = 'ind';
+ 	draftItThree.innerHTML = indexTwo[0].trash;
+ 	banner.appendChild(draftItThree);
 
 for (var i=0; i<geemails.length; i++){
 
-counter.innerHTML = sum + ' ' + indexTwo.draft + indexTwo.sent + indexTwo.trash;
+/*counter.innerHTML = sum + ' ' + indexTwo.draft + indexTwo.sent + indexTwo.trash;*/
 
 	var wrap = document.createElement('div');
 	wrap.className = 'wrapper';
@@ -128,8 +153,22 @@ var newContent = document.getElementsByClassName('subj');
 	}
 
 //COUNTER
-	document.getElementById('counter');
-	counter.innerHTML = 'Inbox (' + newContent.length++ +') ' + indexTwo.draft + indexTwo.sent + indexTwo.trash;
+	/*document.getElementById('inbox1');
+	counter.innerHTML = 'Inbox (' + newContent.length++ +') ' + indexTwo.draft + indexTwo.sent + indexTwo.trash;*/
+	
+	document.getElementById('inbox1');
+	inbox.innerHTML = 'Inbox (' + newContent.length++ +')';
+	banner.appendChild(inbox);
+
+ 	draftIt.innerHTML = indexTwo[0].draft;
+ 	banner.appendChild(draftIt);
+
+ 	draftItTwo.innerHTML = indexTwo[0].sent;
+ 	banner.appendChild(draftItTwo);
+
+ 	draftItThree.innerHTML = indexTwo[0].trash;
+ 	banner.appendChild(draftItThree);
+
 	}
 
 	setInterval(newMail, 3000);

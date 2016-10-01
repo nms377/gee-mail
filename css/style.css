@@ -3,7 +3,9 @@ body{
 }
 
 .wrapper{
-
+	overflow: hidden;
+	float: right;
+	margin-left: 25px;
 }
 
 .date{
@@ -13,4 +15,9 @@ body{
 .bod{
 	display: none;
 /*PAU HANA*/
+}
+
+.ind {
+	list-style-type: none;
+	float: left;
 }

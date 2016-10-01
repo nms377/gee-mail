@@ -10,12 +10,15 @@
 
 /*var sum = 0; */
 
-var sum = 'Inbox ' + geemails.length;
+var sum = 'Inbox (' + geemails.length + ')';
 console.log(sum);
+
+var indexTwo = {draft:'Draft', sent:'Sent', trash:'Trash'};
+/*document.getElementById('counter').style.display = '';*/
 
 for (var i=0; i<geemails.length; i++){
 
-counter.innerHTML = sum;
+counter.innerHTML = sum + ' ' + indexTwo.draft + indexTwo.sent + indexTwo.trash;
 
 	var wrap = document.createElement('div');
 	wrap.className = 'wrapper';
@@ -37,6 +40,7 @@ counter.innerHTML = sum;
 	wrap.appendChild(send);
 
 	var subj = document.createElement('div');
+	subj.style.cursor = 'pointer';
 	subj.className = 'subj';
 	subj.innerHTML = geemails[i].subject;
 	wrap.appendChild(subj);
@@ -51,6 +55,7 @@ counter.innerHTML = sum;
 
 //TOGGLE PART 1
 var content = document.getElementsByClassName('subj');
+	/*document.getElementsByClassName('bod').style.cursor = 'pointer';*/
 	for(var p = 0; p<content.length; p++){
 		content[p].addEventListener('click', subBod);
 	}
@@ -60,10 +65,12 @@ var content = document.getElementsByClassName('subj');
 		if(content.style.display === 
 			'none'){
 			content.style.display = 'block';
+			content.style.color = 'pink';
 		}else{
 			content.style.display = 'none';
 		}
 	}
+
 
 //THIS GENERATES NEW MESSAGES
 	/*console.log(getNewMessage());*/
@@ -92,6 +99,7 @@ var content = document.getElementsByClassName('subj');
 	wrap.appendChild(send);
 
 	var subj = document.createElement('div');
+	subj.style.cursor = 'pointer';
 	subj.className = 'subj';
 	subj.innerHTML = newIsh.subject;
 	wrap.appendChild(subj);
@@ -113,6 +121,7 @@ var newContent = document.getElementsByClassName('subj');
 		var newContent = this.querySelectorAll('.bod')[0];
 		if(newContent.style.display ==='none'){
 			newContent.style.display = 'block';
+			newContent.style.color = 'pink';
 		}else{
 			newContent.style.display = 'none';
 		}
@@ -120,10 +129,8 @@ var newContent = document.getElementsByClassName('subj');
 
 //COUNTER
 	document.getElementById('counter');
-	counter.innerHTML = 'Inbox ' + newContent.length++;
-
+	counter.innerHTML = 'Inbox (' + newContent.length++ +') ' + indexTwo.draft + indexTwo.sent + indexTwo.trash;
 	}
-
 
 	setInterval(newMail, 3000);
 
@@ -138,12 +145,14 @@ var newContent = document.getElementsByClassName('subj');
 
 		<div id="banner"><h1>Gee-Mail</h1>
 
-			<div id="counter"></div>
-
 		</div>
 
+			<div id="counter">
+			</div>
 
-		<div id = "main"> </div>
+		<div id = "main"> 
+
+		</div>
 	</body>
 
 </html>

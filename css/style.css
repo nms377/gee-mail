@@ -12,6 +12,8 @@ body{
 	background-color: #6A4061;
 	white-space: nowrap;
 	letter-spacing: 1px;
+	font-family: 'IM Fell English', serif;
+	color: #F7F4EE;
 }
 
 #counter{
@@ -21,11 +23,12 @@ body{
 	position: fixed;
 	padding-top: 100px;
 	padding-left: 25px;
-	/*background-color: pink;*/
+	line-height: 24px;
 }
 
 .ind {
 	list-style-type: none;
+	font-family: 'Special Elite', cursive;
 	/*float: left;*/
 }
 
@@ -35,9 +38,13 @@ body{
 	position: relative;
 	margin-left: 200px;
 	padding-top: 100px;
+	line-height: 18px;
+	color: #A16A4D;
 }
 
 .wrapper{
+	font-family: 'Special Elite', cursive;
+	letter-spacing: 1px;
 
 }
 
@@ -46,8 +53,11 @@ body{
 }
 
 .bod{
+	padding-top: 10px;
+	font-family: 'Lato', sans-serif;
+	font-weight: 100;
 	display: none;
-/*PAU HANA*/
+	color: #000;
 }
 
 

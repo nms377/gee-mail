@@ -1,6 +1,5 @@
 body{
 	font-family: sans-serif;
-	overflow: visible;
 	margin:0; padding:0; box-sizing:border-box;
 	cursor: default;
 }
@@ -14,21 +13,37 @@ body{
 	letter-spacing: 1px;
 	font-family: 'IM Fell English', serif;
 	color: #F7F4EE;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+h1{
+	letter-spacing: 2px;
 }
 
 #signOut{
 	font-family: 'IM Fell English', serif;
 	font-size: 16px;
+	color: #A16A4D;
+	letter-spacing: 1px;
 	border: none;
 	background-color: #F7F4EE;
-	color: #A16A4D;
-	display: inline-block;
 	padding: 5px 10px;
+	margin-left: 78%;
+	border-radius: 6px;
+	transition-duration: 0.4s;
+}
+
+#signOut:hover{
+	background-color: #6A4061;
+	color: #F7F4EE;
 }
 
 #counter{
 	clear: left;
-	width: 20%;
+	margin-right: 20%;
 	height: 100%;
 	position: fixed;
 	padding-top: 100px;

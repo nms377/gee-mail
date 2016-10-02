@@ -2,6 +2,7 @@ body{
 	font-family: sans-serif;
 	overflow: scroll;
 	margin:0; padding:0; box-sizing:border-box;
+	cursor: default;
 }
 
 #banner{
@@ -18,18 +19,45 @@ body{
 
 #counter{
 	clear: left;
-	width: 15%;
+	width: 20%;
 	height: 100%;
 	position: fixed;
 	padding-top: 100px;
 	padding-left: 25px;
 	line-height: 24px;
+	color: #A16A4D;
+}
+
+#folders{
+	list-style-type: none;
+	font-family: 'Special Elite', cursive;
+	text-indent: 15px;
+	line-height: 24px;
+	cursor: not-allowed;
+}
+
+#folders:hover{
+	color: #000;
+}
+
+#devFolder{
+	list-style-type: none;
+	font-family: 'Special Elite', cursive;
+	font-size: 18px;
+	/*text-decoration: underline;*/
+	margin-top: 25px;
+
 }
 
 .ind {
 	list-style-type: none;
 	font-family: 'Special Elite', cursive;
-	/*float: left;*/
+	color: ##A16A4D;
+	cursor: not-allowed;
+}
+
+.ind:hover{
+	color: #000;
 }
 
 #main{
@@ -46,6 +74,10 @@ body{
 	font-family: 'Special Elite', cursive;
 	letter-spacing: 1px;
 
+}
+
+.wrapper:hover{
+	color: #000;
 }
 
 .date{

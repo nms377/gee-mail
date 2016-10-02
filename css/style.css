@@ -1,6 +1,6 @@
 body{
 	font-family: sans-serif;
-	overflow: scroll;
+	overflow: visible;
 	margin:0; padding:0; box-sizing:border-box;
 	cursor: default;
 }
@@ -11,10 +11,19 @@ body{
 	padding-left: 25px;
 	position: fixed;
 	background-color: #6A4061;
-	white-space: nowrap;
 	letter-spacing: 1px;
 	font-family: 'IM Fell English', serif;
 	color: #F7F4EE;
+}
+
+#signOut{
+	font-family: 'IM Fell English', serif;
+	font-size: 16px;
+	border: none;
+	background-color: #F7F4EE;
+	color: #A16A4D;
+	display: inline-block;
+	padding: 5px 10px;
 }
 
 #counter{

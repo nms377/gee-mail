@@ -9,8 +9,7 @@
         // ALL OF YOUR JAVASCRIPT CODE SHOULD GO HERE. 
         // We have to use window.onload so your JavaScript doesn't execute until the page has loaded and all HTML has been downloaded to your browser
 
-/*var sum = 0; */
-
+//Index Part One
 var indexTwo = [
 	{
 	draft: 'Draft',
@@ -22,6 +21,7 @@ var indexTwo = [
 	var sum = 'Inbox (' + geemails.length + ')';
 	console.log(sum);
 	sum.id = 'inbox1';
+
 	var inbox = document.createElement('li');
 	inbox.className = 'ind';
 	inbox.innerHTML = sum;
@@ -42,10 +42,43 @@ var indexTwo = [
  	draftItThree.innerHTML = indexTwo[0].trash;
  	counter.appendChild(draftItThree);
 
+ //Index Part Two
+ var indexThree = [
+	{
+	fold: 'Folders:',
+	dev: 'Devleague (20)',
+	work: 'Work (1000)',
+	personal: 'Personal',
+	receipts: 'Receipts'
+	}
+];
+
+ 	var draftItFour = document.createElement('li');
+ 	draftItFour.id = 'devFolder';
+ 	draftItFour.innerHTML = indexThree[0].fold;
+ 	counter.appendChild(draftItFour);
+
+ 	var draftItFive = document.createElement('li');
+ 	draftItFive.id = 'folders';
+ 	draftItFive.innerHTML = indexThree[0].dev;
+ 	counter.appendChild(draftItFive);
+
+ 	var draftItSix = document.createElement('li');
+ 	draftItSix.id = 'folders';
+ 	draftItSix.innerHTML = indexThree[0].work;
+ 	counter.appendChild(draftItSix);
+
+ 	var draftItSeven = document.createElement('li');
+ 	draftItSeven.id = 'folders';
+ 	draftItSeven.innerHTML = indexThree[0].personal;
+ 	counter.appendChild(draftItSeven);
+ 
+ 	var draftItEight = document.createElement('li');
+ 	draftItEight.id = 'folders';
+ 	draftItEight.innerHTML = indexThree[0].receipts;
+ 	counter.appendChild(draftItEight);
+
 for (var i=0; i<geemails.length; i++){
-
-/*counter.innerHTML = sum + ' ' + indexTwo.draft + indexTwo.sent + indexTwo.trash;*/
-
 	var wrap = document.createElement('div');
 	wrap.className = 'wrapper';
 	wrap.innerHTML = '';
@@ -75,16 +108,13 @@ for (var i=0; i<geemails.length; i++){
 	var line = document.createElement('hr');
 	line.className = 'line';
 	wrap.appendChild(line);
-
 	}
 
 //TOGGLE PART 1
 var content = document.getElementsByClassName('subj');
-	/*document.getElementsByClassName('bod').style.cursor = 'pointer';*/
 	for(var p = 0; p<content.length; p++){
 		content[p].addEventListener('click', subBod);
 	}
-
 	function subBod(){
 		var content = this.querySelectorAll('.bod')[0];
 		if(content.style.display === 
@@ -95,10 +125,8 @@ var content = document.getElementsByClassName('subj');
 		}
 	}
 
-
 //THIS GENERATES NEW MESSAGES
 	/*console.log(getNewMessage());*/
-
 	function newMail(){
 		
 		var newIsh = getNewMessage();
@@ -107,9 +135,7 @@ var content = document.getElementsByClassName('subj');
 	wrap.className = 'wrapper';
 	wrap.innerHTML = '';
 	main.appendChild(wrap);*/ //coding no like dis
-
 	
-
 	var date = document.createElement('div');
 	date.className= 'date';
 	date.innerHTML = newIsh.date;
@@ -141,7 +167,6 @@ var newContent = document.getElementsByClassName('subj');
 	for(var s = 0; s<newContent.length; s++){
 		newContent[s].addEventListener('click', newSubBod);
 	}
-
 	function newSubBod(){
 		var newContent = this.querySelectorAll('.bod')[0];
 		if(newContent.style.display ==='none'){
@@ -152,8 +177,6 @@ var newContent = document.getElementsByClassName('subj');
 	}
 
 //COUNTER
-	/*document.getElementById('inbox1');
-	counter.innerHTML = 'Inbox (' + newContent.length++ +') ' + indexTwo.draft + indexTwo.sent + indexTwo.trash;*/
 	
 	document.getElementById('inbox1');
 	inbox.innerHTML = 'Inbox (' + newContent.length++ +')';
@@ -168,12 +191,22 @@ var newContent = document.getElementsByClassName('subj');
  	draftItThree.innerHTML = indexTwo[0].trash;
  	counter.appendChild(draftItThree);
 
+ 	draftItFour.innerHTML = indexThree[0].fold;
+ 	counter.appendChild(draftItFour);
+
+ 	draftItFive.innerHTML = indexThree[0].dev;
+ 	counter.appendChild(draftItFive);
+
+ 	draftItSix.innerHTML = indexThree[0].work;
+ 	counter.appendChild(draftItSix);
+
+ 	draftItSeven.innerHTML = indexThree[0].personal;
+ 	counter.appendChild(draftItSeven);
+ 
+ 	draftItEight.innerHTML = indexThree[0].receipts;
+ 	counter.appendChild(draftItEight);
 	}
-
 	setInterval(newMail, 3000);
-
-//PAU HANA!!
-
 };
     </script>
 
@@ -194,3 +227,5 @@ var newContent = document.getElementsByClassName('subj');
 	</body>
 
 </html>
+Contact GitHub API Training Shop Blog About
+© 2016 GitHub, Inc. Terms Privacy Security Status Help

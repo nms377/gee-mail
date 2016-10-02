@@ -58,10 +58,12 @@ h1{
 	text-indent: 15px;
 	line-height: 24px;
 	cursor: not-allowed;
+	transition-duration: 0.4s;
 }
 
 #folders:hover{
 	color: #000;
+	
 }
 
 #devFolder{
@@ -70,7 +72,7 @@ h1{
 	font-size: 18px;
 	/*text-decoration: underline;*/
 	margin-top: 25px;
-
+	
 }
 
 .ind {
@@ -78,6 +80,7 @@ h1{
 	font-family: 'Special Elite', cursive;
 	color: ##A16A4D;
 	cursor: not-allowed;
+	transition-duration: 0.4s;
 }
 
 .ind:hover{
@@ -97,6 +100,7 @@ h1{
 .wrapper{
 	font-family: 'Special Elite', cursive;
 	letter-spacing: 1px;
+	transition-duration: 0.4s;
 
 }
 

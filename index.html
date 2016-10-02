@@ -1,6 +1,6 @@
 <html>
 	<head>
-	<title>GeeMail - Nicole Sandry</title>
+	<title>Gee-Mail: Nicole Sandry</title>
 		<script src="js/mail-generator.js"></script>
 		<link href="css/style.css" rel="stylesheet" media="screen">
 		<link href="https://fonts.googleapis.com/css?family=IM+Fell+English|Lato|Special+Elite" rel="stylesheet">
@@ -78,6 +78,8 @@ var indexTwo = [
  	draftItEight.innerHTML = indexThree[0].receipts;
  	counter.appendChild(draftItEight);
 
+ //For Loop to Pull Emails Through
+
 for (var i=0; i<geemails.length; i++){
 	var wrap = document.createElement('div');
 	wrap.className = 'wrapper';
@@ -86,12 +88,12 @@ for (var i=0; i<geemails.length; i++){
 
 	var date = document.createElement('div');
 	date.className= 'date';
-	date.innerHTML = geemails[i].date /*geemails[i].date*/;
+	date.innerHTML = geemails[i].date;
 	wrap.appendChild(date);
 
 	var send = document.createElement('div');
 	send.className = 'send';
-	send.innerHTML = geemails[i].sender /*geemails[i].sender*/;
+	send.innerHTML = geemails[i].sender;
 	wrap.appendChild(send);
 
 	var subj = document.createElement('div');
@@ -110,7 +112,7 @@ for (var i=0; i<geemails.length; i++){
 	wrap.appendChild(line);
 	}
 
-//TOGGLE PART 1
+//TOGGLE PART 1: Make the body appear
 var content = document.getElementsByClassName('subj');
 	for(var p = 0; p<content.length; p++){
 		content[p].addEventListener('click', subBod);

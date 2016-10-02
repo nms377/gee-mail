@@ -1,11 +1,44 @@
 body{
 	font-family: sans-serif;
+	overflow: scroll;
+	margin:0; padding:0; box-sizing:border-box;
+}
+
+#banner{
+	z-index: 1;
+	width: 100%;
+	padding-left: 25px;
+	position: fixed;
+	background-color: #6A4061;
+	white-space: nowrap;
+	letter-spacing: 1px;
+}
+
+#counter{
+	clear: left;
+	width: 15%;
+	height: 100%;
+	position: fixed;
+	padding-top: 100px;
+	padding-left: 25px;
+	/*background-color: pink;*/
+}
+
+.ind {
+	list-style-type: none;
+	/*float: left;*/
+}
+
+#main{
+	clear: right;
+	margin-right: 25px;
+	position: relative;
+	margin-left: 200px;
+	padding-top: 100px;
 }
 
 .wrapper{
-	overflow: hidden;
-	float: right;
-	margin-left: 25px;
+
 }
 
 .date{
@@ -17,7 +50,9 @@ body{
 /*PAU HANA*/
 }
 
-.ind {
-	list-style-type: none;
-	float: left;
+
+.line{
+	border: none;
+	height: 1px;
+	background-color: #ccc;
 }

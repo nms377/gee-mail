@@ -78,6 +78,18 @@ var indexTwo = [
  	draftItEight.innerHTML = indexThree[0].receipts;
  	counter.appendChild(draftItEight);
 
+ //Footer
+ var footer = document.createElement('footer');
+ footer.id = 'foot';
+ footer.innerHTML = 'Design by Coco Sandry 2016';
+ counter.appendChild(footer);
+
+
+//Vertical line separating the left column with the e-mail Inbox
+	var disLine = document.createElement('hr');
+	disLine.id = 'vLine';
+	counter.appendChild(disLine);
+
  //For Loop to Pull Emails Through
 
 for (var i=0; i<geemails.length; i++){
@@ -207,7 +219,18 @@ var newContent = document.getElementsByClassName('subj');
  
  	draftItEight.innerHTML = indexThree[0].receipts;
  	counter.appendChild(draftItEight);
+
+//Vertical line separating the left column with the e-mail Inbox
+	disLine.id = 'vLine';
+	counter.appendChild(disLine);
+
+
+ //Footer
+ footer.innerHTML = 'Design by Coco Sandry 2016';
+ counter.appendChild(footer);
+ 
 	}
+
 	setInterval(newMail, 3000);
 
 	document.getElementById('signOut').addEventListener('click', function(){alert('Boy Bye');});
@@ -219,6 +242,7 @@ var newContent = document.getElementsByClassName('subj');
 	<body>
 
 		<div id="banner"><h1>Gee-Mail</h1>
+		<p>by Coco Sandry</p>
 
 		<button id= "signOut">Sign Out</button>
 
@@ -230,6 +254,7 @@ var newContent = document.getElementsByClassName('subj');
 		<div id = "main"> 
 
 		</div>
+
 	</body>
 
 </html>

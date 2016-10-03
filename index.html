@@ -9,7 +9,7 @@
         // ALL OF YOUR JAVASCRIPT CODE SHOULD GO HERE. 
         // We have to use window.onload so your JavaScript doesn't execute until the page has loaded and all HTML has been downloaded to your browser
 
-//Index Part One
+//Index Part One: Includes inactive links to Inbox, Sent, and Trash
 var indexTwo = [
 	{
 	draft: 'Draft',
@@ -91,7 +91,7 @@ var indexTwo = [
  counter.appendChild(footer);
 
 
- //For Loop to Pull Emails Through
+ //For Loop to Pull Emails Through (date, sender, subject, and body)
 
 for (var i=0; i<geemails.length; i++){
 	var wrap = document.createElement('div');
@@ -125,7 +125,7 @@ for (var i=0; i<geemails.length; i++){
 	wrap.appendChild(line);
 	}
 
-//TOGGLE PART 1: Make the body appear
+//TOGGLE PART 1: Make the body appear via eventlistener
 var content = document.getElementsByClassName('subj');
 	for(var p = 0; p<content.length; p++){
 		content[p].addEventListener('click', subBod);
@@ -140,7 +140,7 @@ var content = document.getElementsByClassName('subj');
 		}
 	}
 
-//THIS GENERATES NEW MESSAGES
+//This Code Generates One New Messages at Random Every 3 Seconds
 	/*console.log(getNewMessage());*/
 	function newMail(){
 		
@@ -191,7 +191,7 @@ var newContent = document.getElementsByClassName('subj');
 		}
 	}
 
-//COUNTER
+//COUNTER PART TWO: did not include the create elements otherwise it will create a new column
 	
 	document.getElementById('inbox1');
 	inbox.innerHTML = 'Inbox (' + newContent.length++ +')';
@@ -234,6 +234,7 @@ var newContent = document.getElementsByClassName('subj');
 
 	setInterval(newMail, 3000);
 
+//Eventlistener when you click 'Sign Out' button it creates a pop up alert
 	document.getElementById('signOut').addEventListener('click', function(){alert('Boy Bye');});
 };
     </script>

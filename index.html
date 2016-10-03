@@ -78,17 +78,18 @@ var indexTwo = [
  	draftItEight.innerHTML = indexThree[0].receipts;
  	counter.appendChild(draftItEight);
 
- //Footer
- var footer = document.createElement('footer');
- footer.id = 'foot';
- footer.innerHTML = 'Design by Coco Sandry 2016';
- counter.appendChild(footer);
-
 
 //Vertical line separating the left column with the e-mail Inbox
 	var disLine = document.createElement('hr');
 	disLine.id = 'vLine';
 	counter.appendChild(disLine);
+
+ //Footer
+ var footer = document.createElement('footer');
+ footer.id = 'foot';
+ footer.innerHTML = 'Created by Coco Sandry 2016';
+ counter.appendChild(footer);
+
 
  //For Loop to Pull Emails Through
 
@@ -226,7 +227,7 @@ var newContent = document.getElementsByClassName('subj');
 
 
  //Footer
- footer.innerHTML = 'Design by Coco Sandry 2016';
+ footer.innerHTML = 'Created by Coco Sandry 2016';
  counter.appendChild(footer);
  
 	}

@@ -63,8 +63,6 @@ p{
 	color: #A16A4D;
 }
 
-
-
 #vLine{
 	float: right;
 	display: inline-block;
@@ -122,25 +120,22 @@ p{
 	color: #A16A4D;
 }
 
-
 .wrapper{
 	font-family: 'Special Elite', cursive;
+	font-size: 16px;
 	letter-spacing: 1px;
 	transition-duration: 0.4s;
-
+	padding-bottom: 5px;
 }
 
 .wrapper:hover{
 	color: #000;
 }
 
-.date{
-	font-weight: bold;
-}
-
 .bod{
 	padding-top: 10px;
 	font-family: 'Lato', sans-serif;
+	font-size: 14px;
 	font-weight: 100;
 	display: none;
 	color: #000;
@@ -151,6 +146,7 @@ p{
 	border: none;
 	height: 1px;
 	background-color: #ccc;
+	margin-top: 10px;
 }
 
 #foot{
